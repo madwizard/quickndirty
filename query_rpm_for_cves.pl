@@ -18,10 +18,8 @@ foreach my $file (glob('*.rpm')) {
 
     while ($changelog = <$fh>) {
         chomp($changelog);
-        if($changelog =~ s/^.*(CVE-(\d+)-(\d+)).*$/$1/i){
-            push(@{$cves{$changelog}}, $file);
-        }
-    $i++;
+            if ($changelog =~ m/(CVE-\d+-\d+)/) { push (@{$cves{$1}}, $file); }
+            $i++;
     }
 }
 
