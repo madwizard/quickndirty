@@ -1,2 +1,2 @@
-# rpm_cve
-small perl thingy that maps CVEs to packages that mention them in their changelog
+Small repo for quick and dirty tools I had to make for myself.
+Most usable only for a specific task at hand.
